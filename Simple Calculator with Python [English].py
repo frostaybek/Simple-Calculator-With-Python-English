@@ -1,68 +1,71 @@
+import turtle
+import time
+
 def menu():
-	print("""Menu
----------
+	print("""
+Ayaz Aybek production
+	
+-----------
 1-Addition
-2-Subtraction
+2-Substraction
 3-Multiplication
 4-Division
-5-Exit""")
+5-Exit
+-----------
+""")
 
 #Addition, Subtraction, Multiplication, Division and Exit.
 
-def choicemade(selection):
-	if selection == 1:
-		print("Addition chosen")
-		x=input("First number : ")
-		y=input("Second number : ")
-		total=int(x)+int(y)
-		print(total)
+def makechoice(choice):
+	if choice == 1:
+		print("""
+ADDITION SELECTED
+""")
+		x=input("First Number : ")
+		y=input("Second Number : ")
+		add=int(x)+int(y)
+		print(add)
+		time.sleep(0.1)
 		
+	elif choice == 2:
+		print("""
+SUBSTRACTION SELECTED
+""")
+		x=input("First Number : ")
+		y=input("Second Number : ")
+		sub=int(x)-int(y)
+		print(sub)
+		time.sleep(0.1)
 
-	elif selection == 2:
-		print("Subtraction chosen")
-		x=input("First number : ")
-		y=input("Second number : ")
-		eject=int(x)-int(y)
-		print(eject)
+	elif choice == 3:
+		print("""
+MULTIPLICATION SELECTED
+""")
+		x=input("First Number : ")
+		y=input("Second Number : ")
+		multi=int(x)*int(y)
+		print(multi)
+		time.sleep(0.1)
 
-	elif selection == 3:
-		print("multiplication chosen")
-		x=input("First number : ")
-		y=input("Second number : ")
-		multiplication=int(x)*int(y)
-		print(multiplication)
-
-	elif selection == 4:
-		print("chamber chosen")
-		x=input("First number : ")
-		y=input("Second number : ")
-		divide =int(x)/int(y)
-		print(divide)
+	elif choice == 4:
+		print("""
+DIVISION SELECTED
+""")
+		x=input("First Number : ")
+		y=input("Second Number : ")
+		div=int(x)/int(y)
+		print(div)
+		time.sleep(0.1)
 		
-	elif selection == 5:
-	    print("Exit chosen")
-	    pass
-	    
-	    
-selection=0
+	elif choice == 5:
+	    print("EXIT SELECTED, GOODBYE :)")
+	time.sleep(1.2)
+	pass
 
-while int(selection) != 5:
+	    
+choice=0
+
+while int(choice) != 5:
     menu()
-    selection=input("Select your Chosen : ")
-    choicemade(int(selection))
-    
-	    
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
+    choice=input("Make your choice : ")
+    makechoice(int(choice))
